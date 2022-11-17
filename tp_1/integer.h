@@ -52,13 +52,13 @@ void dop_menu(Keeper* keeper)
 	while (1)
 	{
 		system("cls");
-		cout << "Dop menu" << endl;
+		cout << "Dop menu:" << endl;
 		cout << "1. Input car " << endl;
 		cout << "2. Input moto" << endl;
 		cout << "3. Input bus" << endl;
 		cout << "4. Exit" << endl;
 	
-		cout << "Input value";
+		cout << "Input value: ";
 		cin >> num2;
 		if (!check_input())
 			continue;
@@ -140,6 +140,7 @@ void LoadData()
 				if (keeper->get_size() == 0)
 					throw exception("Данных для сохранения недостаточно");
 				cout << "1. Supplement the existing list.\n2. Overwrite the list." << endl;
+				cout << "Input value: " << endl;
 				cin >> ans;
 				if (!check_input())
 				{
